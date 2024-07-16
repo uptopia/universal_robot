@@ -86,7 +86,7 @@
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
-  <!--PU Belt-->
+  <!--PU Belt1-->
   <xacro:include filename="$(find belt12mm_description)/urdf/belt12mm.xacro"/>
   <xacro:belt12mm parent="base_link" prefix="belt12mm_">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -95,6 +95,26 @@
           <parent link="base_link"/>
           <child link="belt12mm_base_link"/>
           <origin xyz="0.5 0.0 0" rpy="1.57 0 1.57"/>
+  </joint>
+
+  <xacro:belt12mm parent="base_link" prefix="belt12mm_2_">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:belt12mm>
+  <joint name="belt12mm_2_joint" type="fixed">
+          <parent link="base_link"/>
+          <child link="belt12mm_2_base_link"/>
+          <origin xyz="0.4 0.1 0" rpy="1.57 0 1.57"/>
+  </joint>
+
+  <!--PU Belt2-->
+  <xacro:include filename="$(find belt10mm_description)/urdf/belt10mm.xacro"/>
+  <xacro:belt12mm parent="base_link" prefix="belt10mm_">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+  </xacro:belt12mm>
+  <joint name="belt10mm_joint" type="fixed">
+          <parent link="base_link"/>
+          <child link="belt10mm_base_link"/>
+          <origin xyz="0.3 0.1 0" rpy="1.57 0 1.57"/>
   </joint>
 
   <!--Connect Camera Link-->
