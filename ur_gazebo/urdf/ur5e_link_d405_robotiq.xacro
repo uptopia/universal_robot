@@ -94,7 +94,8 @@
   <joint name="belt12mm_joint" type="fixed">
           <parent link="base_link"/>
           <child link="belt12mm_base_link"/>
-          <origin xyz="0.55 0.08 0" rpy="1.57 0 1.57"/>
+          <!-- <origin xyz="0.55 0.08 0" rpy="1.57 0 1.57"/> -->
+          <origin xyz="0.55 0.08 0.1" rpy="0.5 0 1.57"/>
   </joint>
 
   <xacro:belt12mm parent="base_link" prefix="belt12mm_2_">
@@ -103,7 +104,8 @@
   <joint name="belt12mm_2_joint" type="fixed">
           <parent link="base_link"/>
           <child link="belt12mm_2_base_link"/>
-          <origin xyz="0.5 0.18 0.02" rpy="1.57 0 1.57"/>
+          <!-- <origin xyz="0.5 0.18 0.02" rpy="1.57 0 1.57"/> -->
+          <origin xyz="0.5 0.18 0.1" rpy="0.5 0 1.57"/>
   </joint>
 
   <!--PU Belt2-->
@@ -114,7 +116,8 @@
   <joint name="belt10mm_joint" type="fixed">
           <parent link="base_link"/>
           <child link="belt10mm_base_link"/>
-          <origin xyz="0.25 -0.03 0" rpy="1.57 0 1.57"/>
+          <!-- <origin xyz="0.25 -0.03 0.1" rpy="1.57 0 1.57"/> -->
+          <origin xyz="0.25 -0.03 0.1" rpy="0.5 0 1.57"/>
   </joint>
 
   <!--Connect Camera Link-->
